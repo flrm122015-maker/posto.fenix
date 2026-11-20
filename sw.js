@@ -1,12 +1,12 @@
-﻿const CACHE='posto-fenix-v8';
+const CACHE='posto-fenix-v9';
 const PREFIX='posto-fenix-';
 
 const ASSETS=[
     './',
     './index.html',
     './manifest.webmanifest',
-    './icons/icon-192.png',
-    './icons/icon-512.png'
+    './icons/icon-192-v9.png',
+    './icons/icon-512-v9.png'
 ];
 
 self.addEventListener('install',event=>{
