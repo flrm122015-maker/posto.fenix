@@ -1,4 +1,4 @@
-const CACHE='posto-fenix-v10';
+const CACHE='posto-fenix-v11';
 const PREFIX='posto-fenix-';
 
 const ASSETS=[
@@ -6,8 +6,8 @@ const ASSETS=[
     './index.html',
     './posto-fenix-energia-em-chamas.png',
     './manifest.webmanifest',
-    './icons/icon-192-v9.png',
-    './icons/icon-512-v9.png'
+    './icons/icon-192-v10.png',
+    './icons/icon-512-v10.png'
 ];
 
 self.addEventListener('install',event=>{
