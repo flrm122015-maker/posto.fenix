@@ -1,9 +1,10 @@
-const CACHE='posto-fenix-v9';
+const CACHE='posto-fenix-v10';
 const PREFIX='posto-fenix-';
 
 const ASSETS=[
     './',
     './index.html',
+    './posto-fenix-energia-em-chamas.png',
     './manifest.webmanifest',
     './icons/icon-192-v9.png',
     './icons/icon-512-v9.png'
