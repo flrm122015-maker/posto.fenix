@@ -1,0 +1,25 @@
+{
+  "name": "POSTO FÊNIX - Controle de Tanques",
+  "short_name": "POSTO FÊNIX",
+  "description": "Controle de medições, tanques e estoque de combustíveis.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#100707",
+  "theme_color": "#a7190e",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
