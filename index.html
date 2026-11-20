@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -225,7 +225,7 @@ body{width:100%;min-width:320px;overflow-x:hidden}
 <div><label>Produto</label><select id="filterProduct"><option value="">Todos</option><option value="s10">Diesel S10</option><option value="aditivada">Gasolina aditivada</option><option value="comum">Gasolina comum</option></select></div>
 <button class="btn btn-red" id="searchBtn">⌕ Buscar</button>
 </div>
-<div class="statgrid"><div class="stat"><small>Medições encontradas</small><b id="resultCount">0</b></div><div class="stat"><small>Falta acumulada</small><b id="shortageTotal">0 L</b></div><div class="stat"><small>Sobra acumulada</small><b id="surplusTotal">0 L</b></div></div>
+<div class="statgrid" style="display:none" aria-hidden="true"><div class="stat"><small>Medições encontradas</small><b id="resultCount">0</b></div><div class="stat"><small>Falta acumulada</small><b id="shortageTotal">0 L</b></div><div class="stat"><small>Sobra acumulada</small><b id="surplusTotal">0 L</b></div></div>
 <div class="tablewrap"><table><thead><tr><th>Data</th><th>Produto</th><th>Régua (cm)</th><th>Régua (L)</th><th>Sistema (L)</th><th>Ajustes (L)</th><th>Régua ajustada</th><th>Diferença</th><th>Ações</th></tr></thead><tbody id="recordsBody"></tbody></table></div>
 <div class="actions"><button class="btn btn-green" id="csvBtn">⇩ Exportar CSV</button><button class="btn btn-blue" id="backupBtn">⇩ Backup (JSON)</button><label class="btn btn-blue" for="importFile">⇧ Importar Backup</label><input class="hidden" type="file" id="importFile" accept=".json,application/json"></div>
 </div>
