@@ -1,4 +1,4 @@
-const CACHE='posto-fenix-v11';
+const CACHE='posto-fenix-v12';
 const PREFIX='posto-fenix-';
 
 const ASSETS=[

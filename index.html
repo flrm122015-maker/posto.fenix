@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#a7190e">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="apple-touch-icon" href="./icons/icon-192-v9.png">
+<link rel="apple-touch-icon" href="./icons/icon-192-v10.png">
 <style>
 :root{--bg:#100707;--panel:#1b0908;--panel2:#2b0b08;--red:#e21a12;--red2:#a80e08;--orange:#ff7417;--gold:#ffc52e;--cream:#fffaf2;--ink:#211b18;--muted:#81736b;--line:#eadfd5;--green:#087b42;--blue:#1467a8}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#65130d 0,#190807 42%,#090505 100%);font:15px/1.45 Inter,Segoe UI,Arial,sans-serif;color:#fff}
@@ -255,14 +255,7 @@ body{width:100%;min-width:320px;overflow-x:hidden}
 const calibration=[[1,8.9,4.5,13.0],[2,25.2,12.8,37.0],[3,46.2,23.5,68.0],[4,71.0,36.1,104.0],[5,99.1,50.4,145.0],[6,130.2,66.2,191.0],[7,155.1,78.9,240.0],[8,190.6,97.0,293.0],[9,228.4,116.2,349.0],[10,268.3,136.5,407.0],[11,310.3,157.8,470.0],[12,354.2,180.1,535.0],[13,399.8,203.3,603.0],[14,447.2,227.5,673.0],[15,496.3,252.4,745.0],[16,546.9,278.1,820.0],[17,599.0,304.7,897.0],[18,652.7,331.9,976.0],[19,707.7,359.9,1058.0],[20,749.9,381.4,1141.0],[21,807.2,410.6,1226.0],[22,866.0,440.4,1313.0],[23,925.9,470.9,1401.0],[24,987.0,502.0,1492.0],[25,1049.4,533.7,1584.0],[26,1112.8,566.0,1678.0],[27,1177.4,598.8,1774.0],[28,1243.1,632.2,1871.0],[29,1309.8,666.1,1969.0],[30,1377.5,700.6,2069.0],[31,1446.2,735.6,2171.0],[32,1516.0,771.0,2274.0],[33,1568.9,797.9,2378.0],[34,1640.3,834.2,2484.0],[35,1712.6,871.0,2591.0],[36,1785.7,908.2,2699.0],[37,1859.8,945.9,2809.0],[38,1934.7,984.0,2920.0],[39,2010.5,1022.5,3032.0],[40,2087.0,1061.5,3145.0],[41,2164.4,1100.8,3259.0],[42,2242.5,1140.6,3375.0],[43,2321.5,1180.7,3491.0],[44,2401.1,1221.2,3609.0],[45,2481.5,1262.1,3728.0],[46,2542.3,1293.0,3848.0],[47,2623.9,1334.5,3969.0],[48,2706.2,1376.4,4090.0],[49,2789.2,1418.6,4213.0],[50,2872.8,1461.1,4337.0],[51,2957.1,1504.0,4462.0],[52,3042.1,1547.2,4587.0],[53,3127.6,1590.7,4714.0],[54,3213.8,1634.5,4841.0],[55,3300.6,1678.7,4970.0],[56,3387.9,1723.1,5099.0],[57,3475.8,1767.8,5229.0],[58,3564.3,1812.8,5359.0],[59,3631.0,1846.7,5491.0],[60,3720.5,1892.2,5623.0],[61,3810.4,1938.0,5757.0],[62,3900.9,1984.0,5890.0],[63,3991.9,2030.3,6025.0],[64,4083.4,2076.8,6160.0],[65,4175.3,2123.6,6296.0],[66,4267.8,2170.6,6433.0],[67,4360.7,2217.9,6570.0],[68,4454.1,2265.3,6709.0],[69,4547.9,2313.1,6847.0],[70,4642.1,2361.0,6987.0],[71,4736.8,2409.1,7127.0],[72,4808.1,2445.4,7267.0],[73,4903.5,2493.9,7408.0],[74,4999.3,2542.6,7550.0],[75,5095.4,2591.5,7692.0],[76,5192.0,2640.7,7835.0],[77,5289.0,2690.0,7979.0],[78,5386.3,2739.5,8122.0],[79,5484.0,2789.1,8267.0],[80,5582.0,2839.0,8412.0],[81,5680.4,2899.0,8557.0],[82,5779.1,2939.2,8703.0],[83,5878.0,2989.6,8850.0],[84,5977.4,3040.1,8996.0],[85,6052.0,3078.1,9144.0],[86,6151.9,3128.8,9291.0],[87,6252.1,3179.8,9440.0],[88,6352.5,3230.9,9588.0],[89,6453.2,3282.1,9737.0],[90,6554.2,3333.4,9886.0],[91,6655.4,3384.9,10036.0],[92,6756.4,3436.5,10186.0],[93,6858.6,3488.3,10337.0],[94,6960.6,3540.1,10488.0],[95,7062.8,3592.1,10639.0],[96,7165.2,3644.2,10790.0],[97,7267.8,3696.4,10942.0],[98,7344.9,3735.6,11094.0],[99,7447.9,3788.0,11246.0],[100,7551.1,3840.5,11399.0],[101,7654.5,3893.1,11552.0],[102,7758.0,3945.7,11705.0],[103,7861.8,3998.5,11858.0],[104,7965.7,4051.3,12012.0],[105,8069.7,4104.3,12166.0],[106,8173.9,4157.2,12320.0],[107,8278.3,4210.3,12474.0],[108,8382.7,4263.5,12629.0],[109,8487.4,4316.7,12784.0],[110,8592.1,4369.9,12938.0],[111,8670.7,4409.9,13094.0],[112,8775.6,4463.3,13249.0],[113,8880.7,4516.7,13404.0],[114,8985.9,4570.2,13560.0],[115,9091.1,4623.7,13715.0],[116,9196.4,4677.3,13871.0],[117,9301.8,4730.9,14027.0],[118,9407.2,4784.5,14183.0],[119,9512.7,4838.1,14339.0],[120,9618.3,4891.8,14495.0],[121,9723.9,4945.6,14651.0],[122,9829.6,4999.3,14807.0],[123,9935.3,5053.1,14964.0],[124,10014.6,5093.4,15120.0],[125,10120.3,5147.2,15277.0],[126,10226.1,5201.0,15433.0],[127,10331.8,5254.8,15589.0],[128,10437.7,5308.6,15746.0],[129,10543.4,5362.4,15902.0],[130,10649.2,5416.2,16059.0],[131,10755.0,5470.0,16215.0],[132,10860.7,5523.7,16372.0],[133,10966.4,5577.5,16528.0],[134,11072.0,5631.2,16684.0],[135,11177.6,5684.9,16840.0],[136,11283.2,5738.6,16996.0],[137,11362.3,5778.9,17152.0],[138,11467.7,5832.5,17308.0],[139,11573.2,5886.1,17464.0],[140,11678.5,5939.7,17620.0],[141,11783.7,5993.2,17776.0],[142,11888.8,6046.7,17931.0],[143,11993.9,6100.1,18086.0],[144,12098.8,6153.4,18242.0],[145,12203.6,6206.8,18397.0],[146,12308.3,6260.0,18552.0],[147,12412.9,6313.2,18706.0],[148,12517.4,6366.3,18861.0],[149,12621.7,6419.4,19015.0],[150,12699.8,6459.1,19169.0],[151,12803.9,6512.0,19323.0],[152,12907.8,6564.9,19477.0],[153,13011.5,6617.6,19630.0],[154,13115.0,6670.3,19783.0],[155,13218.4,6722.9,19936.0],[156,13321.6,6775.3,20089.0],[157,13424.6,6827.7,20241.0],[158,13527.4,6880.0,20393.0],[159,13630.0,6932.2,20545.0],[160,13732.3,6984.3,20696.0],[161,13834.5,7036.2,20847.0],[162,13936.4,7088.0,20998.0],[163,14012.7,7126.8,21148.0],[164,14114.2,7178.4,21298.0],[165,14215.4,7229.9,21448.0],[166,14316.3,7281.3,21597.0],[167,14417.0,7332.5,21746.0],[168,14517.5,7383.6,21895.0],[169,14617.6,7434.5,22043.0],[170,14717.5,7485.3,22191.0],[171,14817.0,7535.9,22338.0],[172,14916.3,7586.4,22485.0],[173,15015.2,7636.7,22631.0],[174,15113.8,7686.9,22777.0],[175,15212.1,7736.8,22922.0],[176,15285.6,7774.2,23067.0],[177,15383.2,7823.9,23212.0],[178,15480.5,7873.4,23356.0],[179,15577.5,7922.7,23499.0],[180,15674.1,7971.8,23642.0],[181,15770.2,8020.7,23784.0],[182,15866.0,8069.4,23926.0],[183,15961.4,8118.0,24067.0],[184,16056.4,8166.3,24207.0],[185,16151.0,8214.4,24347.0],[186,16245.1,8262.2,24486.0],[187,16338.8,8309.9,24625.0],[188,16432.1,8357.3,24763.0],[189,16501.7,8392.8,24900.0],[190,16594.2,8439.8,25037.0],[191,16686.1,8486.6,25173.0],[192,16777.6,8533.1,25308.0],[193,16868.6,8579.3,25443.0],[194,16959.1,8625.4,25577.0],[195,17049.1,8671.1,25710.0],[196,17138.5,8716.6,25842.0],[197,17227.4,8761.8,25973.0],[198,17315.7,8806.8,26104.0],[199,17403.5,8851.4,26234.0],[200,17490.7,8895.8,26363.0],[201,17577.3,8939.8,26491.0],[202,17641.9,8972.7,26618.0],[203,17727.4,9016.2,26745.0],[204,17812.4,9059.4,26870.0],[205,17896.7,9102.2,26995.0],[206,17980.3,9144.8,27119.0],[207,18063.3,9187.0,27241.0],[208,18145.6,9228.9,27363.0],[209,18227.3,9270.4,27484.0],[210,18308.2,9311.5,27604.0],[211,18388.4,9352.3,27722.0],[212,18467.8,9392.7,27840.0],[213,18546.6,9432.8,27956.0],[214,18624.5,9472.4,28072.0],[215,18701.7,9511.7,28186.0],[216,18759.1,9540.8,28299.0],[217,18834.8,9579.4,28411.0],[218,18909.7,9617.5,28522.0],[219,18983.8,9655.1,28631.0],[220,19056.9,9692.3,28740.0],[221,19129.2,9729.1,28846.0],[222,19200.6,9765.4,28952.0],[223,19271.1,9801.2,29056.0],[224,19340.5,9836.6,29159.0],[225,19409.1,9871.4,29260.0],[226,19476.6,9905.8,29360.0],[227,19543.0,9939.6,29459.0],[228,19608.4,9972.8,29556.0],[229,19656.7,9997.4,29651.0],[230,19720.2,10029.7,29745.0],[231,19782.5,10061.4,29837.0],[232,19843.6,10092.5,29927.0],[233,19903.6,10122.9,30016.0],[234,19962.3,10152.8,30103.0],[235,20019.7,10182.0,30187.0],[236,20075.7,10210.5,30270.0],[237,20130.4,10238.3,30351.0],[238,20183.7,10265.4,30430.0],[239,20235.4,10291.7,30507.0],[240,20285.7,10317.3,30582.0],[241,20334.3,10342.0,30654.0],[242,20369.7,10360.0,30724.0],[243,20415.4,10383.2,30791.0],[244,20459.2,10405.5,30856.0],[245,20501.2,10426.9,30918.0],[246,20541.1,10447.2,30976.0],[247,20578.9,10466.4,31032.0],[248,20614.4,10484.5,31085.0],[249,20647.4,10501.2,31134.0],[250,20677.7,10516.7,31179.0],[251,20705.1,10530.6,31220.0],[252,20729.0,10542.7,31255.0],[253,20748.9,10552.9,31286.0],[254,20711.6,10533.9,31309.0]];
 const products={s10:{name:"Diesel S10",col:1,capacity:20000},aditivada:{name:"Gasolina aditivada",col:2,capacity:10000},comum:{name:"Gasolina comum",col:3,capacity:30000}};
 const $=id=>document.getElementById(id),KEY="postoFenixRegistros_v1",POSTS_KEY="postoFenixPostos_v1";
-// Inicialização limpa desta versão: mantém a tabela de arqueação (embutida no app),
-// mas remove medições e postos antigos do armazenamento local uma única vez.
-const CLEAN_START_KEY="postoFenixInicioLimpo_v1";
-if(localStorage.getItem(CLEAN_START_KEY)!=="1"){
- localStorage.removeItem(KEY);
- localStorage.removeItem(POSTS_KEY);
- localStorage.setItem(CLEAN_START_KEY,"1");
-}
+
 
 const fmt=n=>Number(n||0).toLocaleString("pt-BR",{minimumFractionDigits:1,maximumFractionDigits:1});
 const fmtDate=d=>d?d.split("-").reverse().join("/"):"—";
@@ -339,6 +332,195 @@ $("closeModal").onclick=()=>$("detailModal").classList.remove("show");$("detailM
 function editRecord(id){let r=records.find(x=>String(x.id)===String(id));if(!r)return;go("measurement");$("recordId").value=r.id;$("formTitle").textContent="Editar Medição";$("date").value=r.date;$("measurementPost").value=r.postId||"";populateTankSelect();$("product").value=r.tankId||(r.product==="s10"?"tanque-s10-legado":r.product==="aditivada"?"tanque-aditivada-legado":r.product==="comum"?"tanque-comum-legado":"");$("cm").value=r.cm;$("systemLiters").value=r.system;$("notes").value=r.notes||"";setRadio("pendingStatus",r.pendingStatus||"nao");$("pendingLiters").value=r.pendingLiters||0;setRadio("loanStatus",r.loanStatus||"nao");$("loanLiters").value=r.loanLiters||0;$("loanTo").value=r.loanTo||"";setRadio("loanLaunched",r.loanLaunched||"nao");setRadio("borrowedStatus",r.borrowedStatus||"nao");$("borrowedLiters").value=r.borrowedLiters||0;$("borrowedFrom").value=r.borrowedFrom||"";toggleFields();updateCalc();$("cancelEdit").classList.remove("hidden")}
 function deleteRecord(id){if(!confirm("Excluir esta medição?"))return;let old=records;records=records.filter(r=>String(r.id)!==String(id));if(!persist()){records=old;return}renderHistory();renderHome()}
 function download(name,data,type){let a=document.createElement("a"),u=URL.createObjectURL(new Blob([data],{type}));a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1200)}
-function backup(){download("backup-posto-fenix.json",JSON.stringify({version:1,records},null,2),"application/json")}
+function backup(){
+ const pacote={version:2,exportedAt:new Date().toISOString(),records:records,posts:posts};
+ download("backup-posto-fenix.json",JSON.stringify(pacote,null,2),"application/json");
+}
 $("backupBtn").onclick=backup;$("settingsBackup").onclick=backup;
 function csvRows(list){let head=["Data","Posto","Produto_Tanque","Altura_cm","Volume_regua_L","Sistema_L","Nota_pendente_L","Emprestimo_L","Posto_destino","Saida_lancada","Combustivel_recebido_L","Posto_origem","Regua_ajustada_L","Diferenca_L","Observacoes"];return [head,...list.map(r=>{let a=adjustment(r);return [r.date,recordPostName(r),recordProductName(r),r.cm,r.gauge,r.system,r.pendingLiters||0,r.loanLiters||0,r.loanTo||"",r.loanLaunched||"nao",r.borrowedLiters||0,r.borrowedFrom||"",a.adjustedGauge,a.diff,r.notes||""]})].map(row=>row.map(v=>'"'+String(v??"").replaceAll('"','""')+'"').join(";")).join("\r\n")}
+
+$("csvBtn").onclick=()=>download("historico-posto-fenix.csv","\ufeff"+csvRows(filtered()),"text/csv;charset=utf-8");
+$("reportCsv").onclick=()=>download("relatorio-posto-fenix.csv","\ufeff"+csvRows(records),"text/csv;charset=utf-8");
+$("importFile").addEventListener("change",async e=>{
+ const arquivo=e.target.files[0];
+ if(!arquivo)return;
+
+ let registrosNovos=[];
+ let postosNovos=[];
+ let possuiPostos=false;
+
+ try{
+  const obj=JSON.parse(await arquivo.text());
+
+  if(Array.isArray(obj)){
+   registrosNovos=obj;
+  }else if(obj&&typeof obj==="object"&&Array.isArray(obj.records)){
+   registrosNovos=obj.records;
+   possuiPostos=Object.prototype.hasOwnProperty.call(obj,"posts");
+
+   if(possuiPostos){
+    if(!Array.isArray(obj.posts))throw Error("Lista de postos inválida.");
+    postosNovos=obj.posts;
+   }
+  }else{
+   throw Error("Formato de backup inválido.");
+  }
+
+  if(!registrosNovos.every(r=>r&&typeof r==="object"&&!Array.isArray(r)&&r.id!=null)){
+   throw Error("Existem registros inválidos ou sem ID.");
+  }
+
+  if(possuiPostos&&!postosNovos.every(p=>
+   p&&typeof p==="object"&&!Array.isArray(p)&&
+   p.id!=null&&typeof p.name==="string"&&Array.isArray(p.tanks)&&
+   p.tanks.every(t=>t&&typeof t==="object"&&!Array.isArray(t)&&t.id!=null)
+  )){
+   throw Error("Existem postos ou tanques inválidos.");
+  }
+
+  const idsRegistros=new Set(records.map(r=>String(r.id)));
+  const idsPostos=new Set(posts.map(p=>String(p.id)));
+
+  const adicionarRegistros=registrosNovos.filter(r=>{
+   const id=String(r.id);
+   if(idsRegistros.has(id))return false;
+   idsRegistros.add(id);
+   return true;
+  });
+
+  const adicionarPostos=postosNovos.filter(p=>{
+   const id=String(p.id);
+   if(idsPostos.has(id))return false;
+   idsPostos.add(id);
+   return true;
+  });
+
+  const totalRegistros=adicionarRegistros.length;
+  const totalPostos=adicionarPostos.length;
+
+  const resumo="Backup encontrado:\n"+
+   "Registros novos: "+totalRegistros+"\n"+
+   "Postos novos: "+(possuiPostos?totalPostos:"não incluídos neste backup")+
+   "\n\nOs IDs já existentes serão preservados. Deseja continuar?";
+
+  if(!confirm(resumo))return;
+
+  const registrosAnteriores=records;
+  const postosAnteriores=posts;
+  const armazenamentoRegistros=localStorage.getItem(KEY);
+  const armazenamentoPostos=localStorage.getItem(POSTS_KEY);
+
+  const registrosMesclados=records.concat(adicionarRegistros);
+  const postosMesclados=possuiPostos?posts.concat(adicionarPostos):posts;
+
+  try{
+   localStorage.setItem(KEY,JSON.stringify(registrosMesclados));
+
+   if(possuiPostos){
+    localStorage.setItem(POSTS_KEY,JSON.stringify(postosMesclados));
+   }
+
+   records=registrosMesclados;
+   posts=postosMesclados;
+
+  }catch(erro){
+   try{
+    if(armazenamentoRegistros===null)localStorage.removeItem(KEY);
+    else localStorage.setItem(KEY,armazenamentoRegistros);
+
+    if(possuiPostos){
+     if(armazenamentoPostos===null)localStorage.removeItem(POSTS_KEY);
+     else localStorage.setItem(POSTS_KEY,armazenamentoPostos);
+    }
+   }catch(erroRestauracao){
+    console.error("Falha ao restaurar armazenamento:",erroRestauracao);
+   }
+
+   records=registrosAnteriores;
+   posts=postosAnteriores;
+   throw erro;
+  }
+
+  populatePostFilters();
+  populateTankSelect();
+  renderPosts();
+  renderHistory();
+  renderHome();
+  renderReports();
+
+  alert("Importação concluída.\n"+
+   "Registros adicionados: "+totalRegistros+"\n"+
+   "Postos adicionados: "+(possuiPostos?totalPostos:"não aplicável")+
+   "\nCadastros existentes foram preservados.");
+
+ }catch(err){
+  alert("Não foi possível importar o backup: "+err.message);
+  console.error(err);
+ }finally{
+  e.target.value="";
+ }
+});
+function renderCalibration(){let p=$("tableProduct").value,q=Number($("tableSearch").value);if(q>=1&&q<=254){let v=volume(p,q);$("tableLookupValue").textContent=fmt(v)+" L";$("tableLookupHint").textContent=q+" cm · "+products[p].name}else{$("tableLookupValue").textContent="—";$("tableLookupHint").textContent="Informe uma altura de 1 a 254 cm"}$("calibrationBody").innerHTML=calibration.map(r=>`<tr style="${r[0]===254?'background:#fff0d2;font-weight:800':''}"><td>${r[0]}</td><td>${fmt(r[1])}</td><td>${fmt(r[2])}</td><td>${fmt(r[3])}</td></tr>`).join("")}
+$("tableProduct").onchange=renderCalibration;$("tableSearch").oninput=renderCalibration;
+function renderReports(){let net=records.reduce((s,r)=>s+adjustment(r).diff,0);$("reportCount").textContent=records.length;$("reportNet").textContent=fmt(net)+" L";$("reportProducts").textContent=new Set(records.map(r=>r.product)).size;$("reportBody").innerHTML=Object.entries(products).map(([k,p])=>{let rs=records.filter(r=>r.product===k),short=rs.reduce((s,r)=>s+Math.max(0,adjustment(r).diff),0),sur=rs.reduce((s,r)=>s+Math.max(0,-adjustment(r).diff),0);return `<tr><td>${p.name}</td><td>${rs.length}</td><td>${fmt(short)} L</td><td>${fmt(sur)} L</td></tr>`}).join("")}
+$("clearAll").onclick=()=>{if(!confirm("ATENÇÃO: apagar todos os registros salvos neste navegador? Esta ação não pode ser desfeita sem backup."))return;let old=records;records=[];if(!persist()){records=old;return}renderHome();renderReports();renderHistory();alert("Todos os registros foram apagados.")};
+
+function makeId(){return (crypto.randomUUID&&crypto.randomUUID())||String(Date.now())+Math.random().toString(16).slice(2)}
+function buildTankFields(existing=[]){
+ const n=Math.max(1,Math.min(30,Number($("tankCount")?.value||1))),wrap=$("tankFields");if(!wrap)return;
+ wrap.innerHTML=Array.from({length:n},(_,i)=>{const t=existing[i]||{},num=i+1;return `<div class="field full subcard"><div class="subhead">Tanque ${num}</div><div class="formgrid"><div class="field"><label>Produto</label><input class="tank-product" data-i="${i}" required maxlength="60" placeholder="Ex.: Diesel S10" value="${esc(t.product||"")}"></div><div class="field"><label>Capacidade (litros)</label><input class="tank-capacity" data-i="${i}" required type="number" min="1" step="1" placeholder="Ex.: 20000" value="${t.capacity||""}"></div><div class="field full"><label>Tabela de arqueação</label><select class="tank-profile" data-i="${i}"><option value="">Sem tabela cadastrada</option><option value="s10" ${t.calibrationProfile==="s10"?"selected":""}>Tabela de 20.000 litros</option><option value="aditivada" ${t.calibrationProfile==="aditivada"?"selected":""}>Tabela de 10.000 litros</option><option value="comum" ${t.calibrationProfile==="comum"?"selected":""}>Tabela de 30.000 litros</option></select><small class="muted">Selecione somente se esta tabela corresponder à arqueação real do tanque.</small></div></div></div>`}).join("");
+}
+$("tankCount").addEventListener("input",()=>buildTankFields());
+function collectTanks(){return [...document.querySelectorAll(".tank-product")].map((el,i)=>({id:el.dataset.id||makeId(),number:i+1,product:el.value.trim(),capacity:Number(document.querySelector(`.tank-capacity[data-i="${i}"]`).value),calibrationProfile:document.querySelector(`.tank-profile[data-i="${i}"]`).value||""}))}
+$("postForm").addEventListener("submit",e=>{
+ e.preventDefault();const name=$("postName").value.trim(),tanks=collectTanks();
+ if(!name||!tanks.length||tanks.some(t=>!t.product||!Number.isFinite(t.capacity)||t.capacity<=0)){alert("Preencha o nome do posto e os dados de todos os tanques.");return}
+ const id=$("postEditId").value||makeId(),old=posts.find(p=>p.id===id),post={id,name,tanks,createdAt:old?.createdAt||new Date().toISOString()};
+ const prev=posts;const at=posts.findIndex(p=>p.id===id);if(at>=0)posts[at]=post;else posts.push(post);
+ if(!persistPosts()){posts=prev;return}
+ $("postForm").reset();$("postEditId").value="";$("tankCount").value=3;buildTankFields();renderPosts();populatePostFilters();populateTankSelect();alert(at>=0?"Cadastro do posto atualizado.":"Posto cadastrado com sucesso.");
+});
+$("postForm").addEventListener("reset",()=>setTimeout(()=>{ $("postEditId").value="";$("tankCount").value=3;buildTankFields()},0));
+function renderPosts(){
+ const body=$("postsBody");if(!body)return;
+ body.innerHTML=posts.length?posts.map(p=>`<tr><td>${esc(p.name)}</td><td>${p.tanks.length}</td><td>${Number(p.tanks.reduce((s,t)=>s+Number(t.capacity||0),0)).toLocaleString("pt-BR")} L</td><td><button class="btn btn-orange" data-post-edit="${p.id}">Editar</button> <button class="btn btn-red" data-post-delete="${p.id}">Excluir</button></td></tr>`).join(""):'<tr><td colspan="4" class="empty">Nenhum posto cadastrado.</td></tr>';
+ body.querySelectorAll("[data-post-edit]").forEach(b=>b.onclick=()=>editPost(b.dataset.postEdit));
+ body.querySelectorAll("[data-post-delete]").forEach(b=>b.onclick=()=>deletePost(b.dataset.postDelete));
+}
+function editPost(id){const p=posts.find(x=>x.id===id);if(!p)return;go("posts");$("postEditId").value=p.id;$("postName").value=p.name;$("tankCount").value=p.tanks.length;buildTankFields(p.tanks);p.tanks.forEach((t,i)=>{const x=document.querySelector(`.tank-product[data-i="${i}"]`);if(x){x.value=t.product;x.dataset.id=t.id}});$("postName").focus()}
+function deletePost(id){const p=posts.find(x=>x.id===id);if(!p)return;if(records.some(r=>r.postId===id)){alert("Este posto possui medições vinculadas. Não é possível excluí-lo para preservar o histórico.");return}if(!confirm("Excluir o posto "+p.name+"?"))return;const old=posts;posts=posts.filter(x=>x.id!==id);if(!persistPosts()){posts=old;return}renderPosts();populatePostFilters();populateTankSelect()}
+function populatePostFilters(){const f=$("filterPost"),m=$("measurementPost");if(!f||!m)return;const oldF=f.value,oldM=m.value;f.innerHTML='<option value="">Todos os postos</option>'+posts.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join("");m.innerHTML='<option value="">Selecione o posto</option>'+posts.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join("");if(posts.some(p=>p.id===oldF))f.value=oldF;if(posts.some(p=>p.id===oldM))m.value=oldM;populateProductFilter()}
+function populateTankSelect(){const sel=$("product"),p=selectedPost();if(!sel)return;sel.innerHTML=p?'<option value="">Selecione o tanque</option>'+p.tanks.map(t=>`<option value="${t.id}">${esc(tankLabel(t))}</option>`).join(""):'<option value="">Selecione primeiro o posto</option>';sel.disabled=!p;if(p&&p.tanks.length===1)sel.value=p.tanks[0].id;updateCalc()}
+function populateProductFilter(){const f=$("filterProduct");if(!f)return;const postId=$("filterPost")?.value||"",pool=postId?posts.filter(p=>p.id===postId):posts;const names=[...new Set(pool.flatMap(p=>p.tanks.map(t=>t.product)))];const old=f.value;f.innerHTML='<option value="">Todos os produtos</option>'+names.map(n=>`<option value="${esc(n)}">${esc(n)}</option>`).join("");if(names.includes(old))f.value=old}
+
+$("date").value=today();toggleFields();renderPosts();populatePostFilters();populateTankSelect();updateCalc();renderHome();renderCalibration();renderReports();
+</script><script>
+if("serviceWorker" in navigator && location.protocol!=="file:"){
+    window.addEventListener("load",async()=>{
+        try{
+            const registration=await navigator.serviceWorker.register("./sw.js",{updateViaCache:"none"});
+
+            const verificarAtualizacao=()=>{
+                if(navigator.onLine){
+                    registration.update().catch(err=>console.warn("Verificação de atualização:",err));
+                }
+            };
+
+            verificarAtualizacao();
+
+            window.addEventListener("focus",verificarAtualizacao);
+            window.addEventListener("online",verificarAtualizacao);
+
+            document.addEventListener("visibilitychange",()=>{
+                if(document.visibilityState==="visible")verificarAtualizacao();
+            });
+
+            setInterval(verificarAtualizacao,60*60*1000);
+
+        }catch(err){
+            console.warn("Service Worker:",err);
+        }
+    });
+}
+</script>
+</body></html>
